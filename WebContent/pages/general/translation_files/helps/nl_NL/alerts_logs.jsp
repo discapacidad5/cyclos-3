@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <span class="admin"> 
 <br><br>Alerts are for notifying administrators of
 various events including system errors, and events concerning members (number of

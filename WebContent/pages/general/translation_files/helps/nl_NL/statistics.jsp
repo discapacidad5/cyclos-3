@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <br><br>Cyclos has a section for statistical analysis of
 your data. <br>
 Statistics is all about trying to quantify how exact your results are. We do

@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <a name="top"></a>
 <br><br>
 A profile is the information associated with a

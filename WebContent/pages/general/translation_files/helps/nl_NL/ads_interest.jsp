@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <a name="top"></a>
 <br><br>You can receive notifications of new
 advertisements matching your interests. The notifications are based on the

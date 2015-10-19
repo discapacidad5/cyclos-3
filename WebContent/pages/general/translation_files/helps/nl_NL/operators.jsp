@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <a name="top"></a>
 <br><br>The operators function allows a member to define
 operators: a sort of sub-level members who are allowed to do some tasks in

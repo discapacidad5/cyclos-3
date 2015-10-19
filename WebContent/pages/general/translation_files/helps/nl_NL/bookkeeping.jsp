@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <br><br>The bookkeeping function can be used to link
 (mirror) &quot;external accounts&quot; like bank accounts or accounts from other
 currency systems with accounts in a Cyclos system.

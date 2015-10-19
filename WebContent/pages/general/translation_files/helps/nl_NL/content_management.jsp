@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <span class="admin"> <a name="top"></a>
 <br><br>Cyclos allows you to change the User
 Interface by modifying any cyclos system files. In addition, it is

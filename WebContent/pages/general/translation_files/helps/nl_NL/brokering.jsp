@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <br><br>
 A member of a &quot;Broker&quot; type of group can register new members and have
 some level of access and control over these Members (depending of the

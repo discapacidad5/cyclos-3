@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <a name="top"></a>
 <br><br>
 Cyclos allows you to &quot;send the bill&quot;

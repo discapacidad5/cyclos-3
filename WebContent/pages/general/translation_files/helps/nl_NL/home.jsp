@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <br><br>At the home page are The home page is directly
 visible/accessible from the window which you'll see right after login in to
 cyclos. It contains some frequently used functions and status information.

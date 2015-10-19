@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <a name="top"></a>
 <br><br>
 Notifications allow users to be alerted by email

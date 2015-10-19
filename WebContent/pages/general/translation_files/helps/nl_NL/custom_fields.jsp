@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <br><br>Often, organizations running cyclos want their
 own specific type of information stored in the database of cyclos. Therefore, it
 is possible to manage the fields which are maintained in the database, and which

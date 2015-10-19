@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <a name="top"></a>
 <br><br>The references system is a peer review 
 system. If enabled by the administrator, members can assign a reference to 

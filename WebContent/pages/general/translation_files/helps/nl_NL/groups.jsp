@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <br><br>Cyclos has a categorization of users in groups.
 Each user in the system can only be in one group. There are three <a
 	href="#group_categories"><u>main categories</u></a> of groups.<br>

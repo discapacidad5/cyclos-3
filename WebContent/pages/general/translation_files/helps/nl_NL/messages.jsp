@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <a name="top"></a>
 <br><br>Messages in cyclos can be used on many different occasions
 between users of all types. There are many flexible features

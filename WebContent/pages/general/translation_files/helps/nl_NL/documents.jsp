@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <a name="top"></a>
 <br><br>Documents are pages with information which can
 show up in the Member section of Cyclos. The member can select a document from a

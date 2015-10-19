@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <br><br>
 Reports allow you to get an overview of the state of the system. You can view
 several kinds of reports:

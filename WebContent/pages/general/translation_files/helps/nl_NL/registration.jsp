@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <A NAME="public_create_member"></A>
 <h3>Welcome to Cyclos</h3>
 <!-- NOTE: your organization probably may want to customize this file!! 

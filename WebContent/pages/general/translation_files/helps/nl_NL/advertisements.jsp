@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <br><br>A member can publish advertisements and search for
 them. An advertisement has various fields and it is possible
 to upload one or more pictures. The advertisements can be published

@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <br><br>
 <a name="top"></a>
 Transaction feedback allows members to give feedback

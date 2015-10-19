@@ -1,4 +1,4 @@
-<div style="page-break-after: always;"
+<div style="page-break-after: always;"/>
 <a name="top"></a>
 <br><br>Loans can provide the basic credit mechanism for
 Cyclos. Cyclos supports the essential qualities of a loan including scheduled

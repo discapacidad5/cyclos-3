@@ -1426,7 +1426,7 @@
 			<item>alert.system.NULL_RATE</item>
 			<item>alert.system.adminLoginBlockedByPermissionDenieds</item>
 			<item>alert.system.adminTransactionPasswordBlockedByTries</item>
-			<item>card.changeSecurityCode.error.obvious</item>alert
+			<item>card.changeSecurityCode.error.obvious</item>
 			<item>card.securityCode</item>
 			<item>cardType.showCardSecurityCode</item>
 			<item>changeGroup.error.move.hasBalance</item>

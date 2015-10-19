@@ -21,7 +21,7 @@
 <ul>
 	<li><b>新しい登録済みメンバー:</b> メンバーが新しい(初期)グループに入った時に通知することができます。1つまたは複数のグループを選択できます。
 	<br> Eメール確認が(<a href="${pagePrefix}groups#group_registration_settings"><u>メンバーグループ 設定</u></a>内で)必須とされている場合、あなたはそのメンバーが登録を確認した時に通知を受け取ります。
-	<li><b支払い:</b> 利用可能な<a href="${pagePrefix}account_management#transaction_types"><u>支払いタイプ</u></a>の各々について、通知を設定できます。 つまり、そのタイプの移転が生じると、あなたに通知されます。
+	<li><b>支払い:</b> 利用可能な<a href="${pagePrefix}account_management#transaction_types"><u>支払いタイプ</u></a>の各々について、通知を設定できます。 つまり、そのタイプの移転が生じると、あなたに通知されます。
 	<li><b>新しい認可待ちの支払い:</b> 利用可能な<a href="${pagePrefix}account_management#transaction_types"><u>認可可能な支払いタイプ</u> </a>の各々について、通知を設定できます。つまり、このタイプの認可保留中の移転が生じた時にあなたに通知されます。
 	<li><b>保証書:</b> 新しい<a href="${pagePrefix}guarantees"><u>保証書</u> </a>が作成された時に通知を受け取りたい保証書タイプを選択してください。
 	<li><b>メッセージ:</b> 各々の<a href="${pagePrefix}messages#categories"><u>メッセージカテゴリー</u></a>について、通知を設定できます。
