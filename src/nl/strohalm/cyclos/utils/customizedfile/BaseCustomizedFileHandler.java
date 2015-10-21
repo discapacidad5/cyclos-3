@@ -78,8 +78,8 @@ public abstract class BaseCustomizedFileHandler implements ServletContextAware, 
         String realPath = context.getRealPath(path);
         // Tomcat8 workaround:
         if (realPath == null) { 
-        	realPath = new StringBuffer(context.getRealPath("/")).append(path).toString();
-        	LOG.warn("copying to "+ realPath);
+        	realPath = context.getRealPath("/") + path;
+        	LOG.trace("copying to "+ realPath);
         }
         
         final File file = new File(realPath);

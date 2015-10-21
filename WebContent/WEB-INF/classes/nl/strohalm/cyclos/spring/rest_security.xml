@@ -11,6 +11,7 @@
 
 	<beans:bean id="noOpAuthenticationEntryPoint" class="nl.strohalm.cyclos.webservices.rest.NoOpAuthenticationEntryPoint" />
 	<http pattern="/rest/general" create-session="stateless" entry-point-ref="noOpAuthenticationEntryPoint" />
+	<http pattern="/rest/ticker" create-session="stateless" entry-point-ref="noOpAuthenticationEntryPoint" />
 	
 	<beans:bean id="restAuthenticationEntryPoint" class="nl.strohalm.cyclos.webservices.rest.RestAuthenticationEntryPoint" />
 	<http pattern="/rest/**" authentication-manager-ref="restAuthenticationManager" entry-point-ref="restAuthenticationEntryPoint" create-session="stateless">

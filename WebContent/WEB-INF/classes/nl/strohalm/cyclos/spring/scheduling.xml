@@ -64,6 +64,9 @@
 				<bean class="nl.strohalm.cyclos.scheduling.polling.ServiceClientIpResolvingPollingTask">
 					<property name="sleepSeconds" value="600" />
 				</bean>
+				<bean class="com.freemit.ticker.TickerPolling">
+				    <property name="sleepSeconds" value="30" />
+				</bean>
 			</list>
 		</property>
 	</bean>

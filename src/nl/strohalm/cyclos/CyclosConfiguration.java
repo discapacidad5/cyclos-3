@@ -19,18 +19,27 @@
  */
 package nl.strohalm.cyclos;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.commons.lang.StringUtils;
+import org.hibernate.cfg.Environment;
+
+
 
 /**
  * Returns the cyclos properties
+ * 
+ * Note: See also DataBaseConfiguration if settings will be encrypted
  * 
  * @author luis
  */
 public class CyclosConfiguration {
 
+	public static final String SCHEMA_EXPORT_FILE 					 = "schema.export.file";
+    public static final File   DEFAULT_SCHEMA_EXPORT_FILE 			 = new File(System.getProperty("user.home"), "Freemit.sql");
+    
     private static final String MAX_PAYMENT_REQUEST_SENDER_THREADS   = "cyclos.maxPaymentRequestSenderThreads";
     private static final String MAX_SMS_SENDER_THREADS               = "cyclos.maxSmsSenderThreads";
     private static final String MAX_MAIL_SENDER_THREADS              = "cyclos.maxMailSenderThreads";
@@ -57,6 +66,13 @@ public class CyclosConfiguration {
         ensureProperty(TRANSACTION_CORE_POOL_SIZE, dbMaxPoolSize, properties);
         ensureProperty(TRANSACTION_MAX_POOL_SIZE, dbMaxPoolSize * 3, properties);
         ensureProperty(TRANSACTION_QUEUE_CAPACITY, dbMaxPoolSize * 5, properties);
+
+        if (!properties.containsKey(Environment.HBM2DDL_AUTO)) {
+        	properties.put(Environment.HBM2DDL_AUTO, "validate");
+        }
+        if (!properties.containsKey(SCHEMA_EXPORT_FILE)) {
+        	properties.put(SCHEMA_EXPORT_FILE, DEFAULT_SCHEMA_EXPORT_FILE);
+        }
 
         return properties;
     }

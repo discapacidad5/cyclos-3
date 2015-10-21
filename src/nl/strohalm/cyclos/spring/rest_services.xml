@@ -28,6 +28,7 @@
 	</bean>
 
 	<!-- REST controllers -->
+	<bean id="tickerRestController" class="com.freemit.ticker.TickerRestController" />
 	<bean id="generalRestController" class="nl.strohalm.cyclos.webservices.rest.GeneralRestController" />
 	<bean id="accessRestController" class="nl.strohalm.cyclos.webservices.rest.AccessRestController" />
 	<bean id="membersRestController" class="nl.strohalm.cyclos.webservices.rest.MembersRestController" />

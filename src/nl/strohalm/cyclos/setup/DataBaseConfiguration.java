@@ -29,10 +29,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
 
-import nl.strohalm.cyclos.utils.JDBCWrapper;
-import nl.strohalm.cyclos.utils.conversion.LocaleConverter;
-import nl.strohalm.cyclos.utils.tasks.TaskRunner;
-
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
@@ -42,6 +38,10 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.connection.ConnectionProvider;
 import org.hibernate.connection.DatasourceConnectionProvider;
+
+import nl.strohalm.cyclos.utils.JDBCWrapper;
+import nl.strohalm.cyclos.utils.conversion.LocaleConverter;
+import nl.strohalm.cyclos.utils.tasks.TaskRunner;
 
 /**
  * Class used to manage database configuration, validate the connection, generate the database when in embedded mode and apply automatic schema
@@ -59,6 +59,10 @@ public class DataBaseConfiguration {
     public DataBaseConfiguration(final Configuration configuration, final TaskRunner taskRunner) {
         this.configuration = configuration;
         this.taskRunner = taskRunner;
+        // judahmu edit: to not re-parse properties file.  
+        //     Requires escaping special characters (colons and exclamation marks) in .properties strings        
+        // try {configuration.setProperties(CyclosConfiguration.getCyclosProperties());
+        // } catch (IOException e) {LOG.error(e);equals("cyclos.properties not imported to DataBaseConfiguration. " + e.getMessage());}        
     }
 
     public Configuration getConfiguration() {

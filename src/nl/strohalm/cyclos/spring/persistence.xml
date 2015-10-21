@@ -13,6 +13,7 @@
 
 	<!-- The Hibernate session factory -->
 	<bean id="sessionFactory" class="nl.strohalm.cyclos.spring.CustomSessionFactoryBean">
+	
 		<property name="mappingResources">
 			<list>
 				<value>/nl/strohalm/cyclos/dao/definitions.hbm.xml</value>
@@ -188,6 +189,7 @@
 				<value>/nl/strohalm/cyclos/entities/accounts/pos/MemberPos.hbm.xml</value>
 				<value>/nl/strohalm/cyclos/entities/accounts/pos/PosLog.hbm.xml</value>
 				<value>/nl/strohalm/cyclos/entities/infotexts/InfoText.hbm.xml</value>
+				<value>/com/freemit/ticker/Ticker.hbm.xml</value>
 			</list>
 		</property>
 		

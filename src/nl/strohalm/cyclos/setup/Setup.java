@@ -31,17 +31,18 @@ import java.util.Locale;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
-import nl.strohalm.cyclos.CyclosConfiguration;
-import nl.strohalm.cyclos.utils.PropertiesHelper;
-import nl.strohalm.cyclos.utils.conversion.LocaleConverter;
-
 import org.apache.commons.lang.StringUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import nl.strohalm.cyclos.CyclosConfiguration;
+import nl.strohalm.cyclos.utils.PropertiesHelper;
+import nl.strohalm.cyclos.utils.conversion.LocaleConverter;
 
 /**
  * Generate cyclos default data
@@ -261,6 +262,14 @@ public class Setup {
         if (bundle == null) {
             bundle = getResourceBundle(locale);
         }
+        
+        if (exportScriptTo == null) {
+        	try {
+    			exportScriptTo = (File)CyclosConfiguration.getCyclosProperties().get(CyclosConfiguration.SCHEMA_EXPORT_FILE);
+	    	} catch (Throwable t) {
+	    		LoggerFactory.getLogger(Setup.class).warn("Failed setting custom export schema script location.. " + t.getMessage());
+	    	}
+    	}
     }
 
     /**

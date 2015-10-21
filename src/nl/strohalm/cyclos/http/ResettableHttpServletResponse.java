@@ -62,7 +62,7 @@ public class ResettableHttpServletResponse implements HttpServletResponse, Reset
     private ServletOutputStream     servletOutputStream;
     private File                    contents;
     private Set<String>             headerNames;
-    private Integer                 status;
+    private int		                status;
     private boolean                 stateApplied;
 
     public ResettableHttpServletResponse(final HttpServletResponse response) {
@@ -273,7 +273,7 @@ public class ResettableHttpServletResponse implements HttpServletResponse, Reset
 
     @Override
     public void resetState() {
-        status = null;
+        status = 0;
         operations.clear();
         headerNames.clear();
         charset = wrapped.getCharacterEncoding();

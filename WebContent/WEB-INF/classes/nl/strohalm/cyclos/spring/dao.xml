@@ -138,5 +138,6 @@
     <bean id="posLogDao" class="nl.strohalm.cyclos.dao.accounts.pos.PosLogDAOImpl" />
     
     <bean id="infoTextDao" class="nl.strohalm.cyclos.dao.infotexts.InfoTextDAOImpl" />
-
+	<bean id="tickerDao" class="com.freemit.ticker.TickerDAOImpl" />
+	
 </beans>
