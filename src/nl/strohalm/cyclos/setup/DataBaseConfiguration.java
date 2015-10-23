@@ -59,7 +59,7 @@ public class DataBaseConfiguration {
     public DataBaseConfiguration(final Configuration configuration, final TaskRunner taskRunner) {
         this.configuration = configuration;
         this.taskRunner = taskRunner;
-        // judahmu edit: to not re-parse properties file.  
+        // judahmu edit: to not re-parse properties file via persistence.xml.  
         //     Requires escaping special characters (colons and exclamation marks) in .properties strings        
         // try {configuration.setProperties(CyclosConfiguration.getCyclosProperties());
         // } catch (IOException e) {LOG.error(e);equals("cyclos.properties not imported to DataBaseConfiguration. " + e.getMessage());}        

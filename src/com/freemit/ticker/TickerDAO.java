@@ -9,9 +9,16 @@ public interface TickerDAO extends BaseDAO<TickerEntity> /*, InsertableDAO<Ticke
 
 	TickerVO getCurrentVO();
 	
+	// TODO Currency Support (besides USD/BTC)
+	
 	// TODO ArrayList<Ticker> queryForTimeRange(Calendar start, Calendar end);
 	
 	// TODO Ticker closest(Calendar timestamp);
 
-	// TODO Currency support
+	// TODO Ticker highest(Calendar start, Calendar end);
+	
+	// TODO Ticker lowest(Calendar start, Calendar end);
+	
+	// TODO BigDecimal average(Calendar start, Calendar end);
+	
 }

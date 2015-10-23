@@ -31,6 +31,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+
+import com.freemit.Currencies;
+
 import nl.strohalm.cyclos.entities.access.Channel;
 import nl.strohalm.cyclos.entities.accounts.AccountLock;
 import nl.strohalm.cyclos.entities.accounts.AccountType;
@@ -70,9 +75,6 @@ import nl.strohalm.cyclos.entities.members.records.MemberRecordType;
 import nl.strohalm.cyclos.utils.Amount;
 import nl.strohalm.cyclos.utils.TimePeriod;
 
-import org.hibernate.Session;
-import org.hibernate.criterion.Restrictions;
-
 /**
  * Creates a set of default account related data, as well as other default data. These are the generated account types:
  * <ol>
@@ -94,14 +96,17 @@ import org.hibernate.criterion.Restrictions;
 public class CreateInitialData implements Runnable {
 
     private final ResourceBundle           bundle;
-    private Currency                       units;
-    private SystemAccountType              community;
-    private SystemAccountType              debit;
+//     private Currency                       units;
+  private SystemAccountType              community;
+  private SystemAccountType              debit;
+  private SystemAccountType              organization;
+  private SystemAccountType              voucher;
+    
     private MemberAccountType              member;
-    private SystemAccountType              organization;
+
     private final Session                  session;
     private final Map<String, AccountType> systemTypes;
-    private SystemAccountType              voucher;
+
     private TransferType                   trade;
     private TransferType                   mobileTrade;
     private TransferType                   externalTrade;
@@ -230,11 +235,14 @@ public class CreateInitialData implements Runnable {
     }
 
     private void createCurrencies() {
-        units = new Currency();
-        units.setName("Units");
-        units.setPattern("#amount# units");
-        units.setSymbol("units");
-        session.save(units);
+    	for (Currencies current : Currencies.values()) {
+    		session.save(current.getEntity());
+    	}
+//        units = new Currency();
+//        units.setName("Units");
+//        units.setPattern("#amount# units");
+//        units.setSymbol("units");
+//        session.save(units);
     }
 
     private void createCustomFields() {
@@ -468,7 +476,7 @@ public class CreateInitialData implements Runnable {
 
     private void createMemberAccountTypes() {
         member = new MemberAccountType();
-        member.setCurrency(units);
+        member.setCurrency(Currencies.BTC.getEntity());
         member.setName(bundle.getString("account.member.name"));
         member.setDescription(bundle.getString("account.member.description"));
         session.save(member);
@@ -607,19 +615,29 @@ public class CreateInitialData implements Runnable {
         createSystemAccount(organization);
     }
 
+    
+    SystemAccountType systemType(String name) {
+    	SystemAccountType result = new SystemAccountType();
+    	
+    	return result;
+    }
+    
+    
     @SuppressWarnings("unchecked")
+    // TODO build from enums
     private void createSystemAccountTypes() {
+    	Currency currency = Currencies.BTC.getEntity();
+    	
         debit = new SystemAccountType();
+        debit.setCurrency(currency);
         debit.setCreditLimit(null);
         debit.setName(bundle.getString("account.debit.name"));
         debit.setDescription(bundle.getString("account.debit.description"));
-        debit.setCurrency(units);
-
         session.save(debit);
         systemTypes.put("debit", debit);
 
         community = new SystemAccountType();
-        community.setCurrency(units);
+        community.setCurrency(currency);
         community.setName(bundle.getString("account.community.name"));
         community.setDescription(bundle.getString("account.community.description"));
         community.setCreditLimit(BigDecimal.ZERO);
@@ -627,7 +645,7 @@ public class CreateInitialData implements Runnable {
         systemTypes.put("community", community);
 
         voucher = new SystemAccountType();
-        voucher.setCurrency(units);
+        voucher.setCurrency(currency);
         voucher.setName(bundle.getString("account.voucher.name"));
         voucher.setDescription(bundle.getString("account.voucher.description"));
         voucher.setCreditLimit(BigDecimal.ZERO);
@@ -635,7 +653,7 @@ public class CreateInitialData implements Runnable {
         systemTypes.put("voucher", voucher);
 
         organization = new SystemAccountType();
-        organization.setCurrency(units);
+        organization.setCurrency(currency);
         organization.setName(bundle.getString("account.organization.name"));
         organization.setDescription(bundle.getString("account.organization.description"));
         organization.setCreditLimit(BigDecimal.ZERO);
@@ -649,7 +667,7 @@ public class CreateInitialData implements Runnable {
     }
 
     private void createTransferTypes() {
-
+    	// TODO build from enums
         final Channel web = (Channel) session.createCriteria(Channel.class).add(Restrictions.eq("internalName", Channel.WEB)).uniqueResult();
 
         memberDebit = new ArrayList<TransferType>();

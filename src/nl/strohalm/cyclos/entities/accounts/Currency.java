@@ -50,12 +50,17 @@ public class Currency extends Entity {
     private static final long serialVersionUID = 5910755754107368364L;
 
     private String            name;
+    // InternationalizationTODO: Translation Key for the Name of this currency in different languages  
+    // String 				  translationKey;
+    
     private String            description;
+    /**ISO 4217 code*/
     private String            symbol;
     private String            pattern          = "#amount#";
     private DRateParameters   dRateParameters;
     private ARateParameters   aRateParameters;
     private IRateParameters   iRateParameters;
+
 
     public ARateParameters getaRateParameters() {
         return aRateParameters;
@@ -89,6 +94,7 @@ public class Currency extends Entity {
         return pattern;
     }
 
+    /** @return ISO 4217 code */
     public String getSymbol() {
         return symbol;
     }

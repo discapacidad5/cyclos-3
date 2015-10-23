@@ -102,7 +102,7 @@ public class TickerPolling extends PollingTask {
         get.setRequestHeader(USER_AGENT);
         int code = client.executeMethod(get);
         if (code != 200) {
-            throw new HttpException("Error Code " + code + " getting ticker.");// new String(get.getResponseBody())
+            throw new HttpException("Error Code " + code + " getting ticker.");
         }
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readValue(get.getResponseBody(), JsonNode.class);
@@ -113,7 +113,7 @@ public class TickerPolling extends PollingTask {
         get.setRequestHeader(USER_AGENT);
         int code = client.executeMethod(get);
         if (code != 200) {
-            throw new HttpException("Error Code " + code + " getting ticker.");// new String(get.getResponseBody())
+            throw new HttpException("Error Code " + code + " getting ticker.");
         }
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readValue(get.getResponseBody(), JsonNode.class);
@@ -124,7 +124,7 @@ public class TickerPolling extends PollingTask {
         get.setRequestHeader(USER_AGENT);
         int code = client.executeMethod(get);
         if (code != 200) {
-            throw new HttpException("Error Code " + code + " getting ticker.");// new String(get.getResponseBody())
+            throw new HttpException("Error Code " + code + " getting ticker.");
         }
         ObjectMapper mapper = new ObjectMapper();
         JsonNode root = mapper.readValue(get.getResponseBody(), JsonNode.class);

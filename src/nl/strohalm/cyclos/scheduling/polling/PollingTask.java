@@ -66,8 +66,7 @@ public abstract class PollingTask extends Thread {
         // Sleep the first time. The random time is to help not having multiple polling tasks running at the same second
         try {
             int initialSleepSeconds = new Random().nextInt(sleepSeconds);
-            // judahmu edit: we want freemit services startup quickly.  If problems, switch back to 1000...
-            Thread.sleep(initialSleepSeconds * 100);
+            Thread.sleep(initialSleepSeconds * 1000);
         } catch (InterruptedException e) {
             return;
         }
